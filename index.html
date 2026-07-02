@@ -194,13 +194,17 @@ body{
 .tl-row{
   position:relative;
   z-index:2;
-  display:flex;align-items:center;justify-content:center;gap:4px;
+  display:flex;align-items:center;justify-content:flex-start;gap:4px;
   padding:8px 24px;
   max-width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
   scrollbar-width:thin;scrollbar-color:rgba(184,149,62,0.25) transparent;
   width:100%;
   contain:layout style;
 }
+/* Zentriert, solange alles passt; bei Ueberlauf bleibt der linke Rand erreichbar */
+.tl-row > :first-child{margin-left:auto;}
+.tl-row > :last-child{margin-right:auto;}
 .tl-row::-webkit-scrollbar{height:3px;}
 .tl-row::-webkit-scrollbar-thumb{background:rgba(184,149,62,0.25);border-radius:2px;}
 
@@ -265,6 +269,8 @@ body{
 }
 .card-medal{width:clamp(30px,3vw,44px);height:clamp(30px,3vw,44px);border-radius:50%;background:linear-gradient(135deg,var(--card-warm),#ede4d0);border:1.5px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:clamp(1rem,1.8vw,1.5rem);line-height:1;box-shadow:0 1px 4px rgba(0,0,0,0.06);margin-bottom:4px;flex-shrink:0;}
 .card-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(0.88rem,1.3vw,1.2rem);text-align:center;color:var(--ink);line-height:1.2;flex:1;display:flex;align-items:center;}
+/* Lange Woerter (z.B. Unabhaengigkeitserklaerung) automatisch trennen statt abschneiden */
+.cc-name,.card-name,.hcard-name,.df-name,.cf-name,.wf-name{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere;min-width:0;max-width:100%;justify-content:center;overflow:hidden;}
 .card-yr{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,1.4vw,1.4rem);font-weight:600;font-style:italic;color:var(--accent);background:linear-gradient(135deg,rgba(184,149,62,0.08),rgba(184,149,62,0.04));border:1px solid rgba(184,149,62,0.25);border-radius:4px;padding:3px 12px;margin-top:auto;}
 .card.pop{animation:popIn 0.35s ease-out;}
 .card.correct-flash .card-face-front{box-shadow:0 0 16px rgba(58,112,64,0.4),0 0 0 2px var(--green);}
@@ -550,22 +556,22 @@ body{
   .hdr-left{gap:8px;}
   .hdr-scores{gap:8px;}
   .table{padding:50px 8px 8px;}
-  .card{width:90px;height:130px;}
-  .card-face-back::after{font-size:1.2rem;}
-  .card-medal{width:26px;height:26px;font-size:0.9rem;}
-  .card-name{font-size:0.78rem;}
-  .card-yr{font-size:0.95rem;padding:2px 6px;}
-  .hand-card-wrap{width:110px;height:158px;}
-  .hcard-medal{width:26px;height:26px;font-size:0.9rem;}
-  .hcard-name{font-size:0.78rem;}
-  .cpu-card{width:72px;height:104px;}
-  .cpu-card-wrap{width:72px;height:104px;}
-  .cpu-card .cc-medal{width:22px;height:22px;font-size:0.8rem;}
-  .cpu-card .cc-name{font-size:0.66rem;}
-  .drag-float,.cpu-float{width:90px;height:130px;}
-  .drag-float .df-medal,.cpu-float .cf-medal{width:26px;height:26px;font-size:0.9rem;}
-  .drag-float .df-name,.cpu-float .cf-name{font-size:0.78rem;}
-  .drop{height:130px;}
+  .card{width:106px;height:150px;}
+  .card-face-back::after{font-size:1.4rem;}
+  .card-medal{width:30px;height:30px;font-size:1.05rem;}
+  .card-name{font-size:0.94rem;}
+  .card-yr{font-size:1.05rem;padding:2px 8px;}
+  .hand-card-wrap{width:136px;height:190px;}
+  .hcard-medal{width:34px;height:34px;font-size:1.15rem;}
+  .hcard-name{font-size:1.05rem;}
+  .cpu-card{width:84px;height:120px;}
+  .cpu-card-wrap{width:84px;height:120px;}
+  .cpu-card .cc-medal{width:26px;height:26px;font-size:0.95rem;}
+  .cpu-card .cc-name{font-size:0.8rem;}
+  .drag-float,.cpu-float{width:106px;height:150px;}
+  .drag-float .df-medal,.cpu-float .cf-medal{width:30px;height:30px;font-size:1.05rem;}
+  .drag-float .df-name,.cpu-float .cf-name{font-size:0.94rem;}
+  .drop{height:150px;}
   .ov-box{padding:24px 16px;}
   .ov-box h1{font-size:2.4rem;}
   .sel-btn{padding:6px 12px;font-size:0.78rem;}
