@@ -1319,6 +1319,17 @@ function doPlace(pos,idx,bv,dropRect){
 // ======================== COMPUTER ========================
 function compT(){
   if(S.over)return;
+  // Absicherung: Computer hat keine Karten mehr. Zug geht zurueck an den
+  // Spieler oder das Spiel endet, statt dass "denkt nach" haengen bleibt.
+  if(!S.cHand.length){
+    if(!S.hand.length){
+      S.over=true;stopTimer();render();
+      setTimeout(()=>endG(S.pS>S.cS?'p':S.pS<S.cS?'c':'draw'),800);
+    }else{
+      S.turn=true;render();resetTimer();
+    }
+    return;
+  }
   document.getElementById('think').classList.add('vis');
   const cpuTopCard=document.getElementById('cpuTopCard');
   if(cpuTopCard)cpuTopCard.classList.add('playing');
