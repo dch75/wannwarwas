@@ -281,7 +281,7 @@ body{
 .card.wrong-flash .card-face-front{box-shadow:0 0 16px rgba(152,48,48,0.4),0 0 0 2px var(--red);}
 
 /* === DROP === */
-.drop{width:4px;height:clamp(158px,14.5vw,215px);flex-shrink:0;border-radius:2px;background:transparent;transition:all 0.38s ease;}
+.drop{width:4px;height:clamp(158px,14.5vw,215px);flex-shrink:0;border-radius:2px;background:transparent;transition:all 0.22s ease;}
 .drop.on{width:36px;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(184,149,62,0.12) 4px,rgba(184,149,62,0.12) 8px);border:1.5px dashed rgba(184,149,62,0.3);border-radius:6px;}
 .drop.hot{width:56px;background:var(--gold-glow);border:2px solid var(--gold-bright);box-shadow:0 0 20px rgba(212,173,74,0.2);border-radius:6px;}
 
@@ -1052,7 +1052,7 @@ function _rafMove(){
     const cur=_dropCache.find(dp=>dp.p===D.slot);
     if(cur){
       const curDist=Math.hypot(mx-cur.cx,my-cur.cy);
-      if(curDist<detectR && bd>curDist-30) best=D.slot;
+      if(curDist<detectR && bd>curDist-14) best=D.slot;
     }
   }
 
