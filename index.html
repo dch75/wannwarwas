@@ -41,8 +41,12 @@ body{
 .hdr-title{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(1.1rem,1.6vw,1.5rem);color:var(--gold);}
 .hdr-btn{font-family:'Cormorant Garamond',serif;font-size:clamp(0.68rem,0.8vw,0.82rem);font-weight:500;padding:4px 12px;border-radius:4px;cursor:pointer;border:1px solid rgba(184,149,62,0.4);background:transparent;color:var(--ink-mid);transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .hdr-btn:hover{border-color:var(--gold);color:var(--ink);background:rgba(184,149,62,0.08);}
-.hdr-sound{font-size:1rem;padding:4px 9px;line-height:1;}
-.hdr-sound.muted{opacity:0.4;}
+.hdr-sound{padding:4px 9px;line-height:1;display:inline-flex;align-items:center;color:var(--ink-mid);}
+.hdr-sound svg{display:block;}
+.hdr-sound .snd-off{display:none;}
+.hdr-sound.muted .snd-on{display:none;}
+.hdr-sound.muted .snd-off{display:block;}
+.hdr-sound.muted{opacity:0.45;}
 .hdr-mid{display:flex;align-items:center;gap:12px;}
 .streak-badge{display:none;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:500;padding:3px 10px;border-radius:12px;background:linear-gradient(135deg,#fef8e8,#fdf0c8);color:var(--medal);border:1px solid #e0cc80;}
 .streak-badge.vis{display:flex;align-items:center;gap:4px;}
@@ -277,7 +281,7 @@ body{
 .card.wrong-flash .card-face-front{box-shadow:0 0 16px rgba(152,48,48,0.4),0 0 0 2px var(--red);}
 
 /* === DROP === */
-.drop{width:4px;height:clamp(158px,14.5vw,215px);flex-shrink:0;border-radius:2px;background:transparent;transition:all 0.2s;}
+.drop{width:4px;height:clamp(158px,14.5vw,215px);flex-shrink:0;border-radius:2px;background:transparent;transition:all 0.38s ease;}
 .drop.on{width:36px;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(184,149,62,0.12) 4px,rgba(184,149,62,0.12) 8px);border:1.5px dashed rgba(184,149,62,0.3);border-radius:6px;}
 .drop.hot{width:56px;background:var(--gold-glow);border:2px solid var(--gold-bright);box-shadow:0 0 20px rgba(212,173,74,0.2);border-radius:6px;}
 
@@ -747,7 +751,7 @@ body{
   <div class="hdr-left">
     <div class="hdr-title">Wann war was?</div>
     <button class="hdr-btn" id="hdrRestart">↺ Neu</button>
-    <button class="hdr-btn hdr-sound" id="hdrSound" title="Ton an/aus">🔊</button>
+    <button class="hdr-btn hdr-sound" id="hdrSound" title="Ton an/aus"><svg class="snd-on" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><path d="M14.5 9a4.2 4.2 0 0 1 0 6"/><path d="M17 6.5a7.6 7.6 0 0 1 0 11"/></svg><svg class="snd-off" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><line x1="15" y1="9.5" x2="20" y2="14.5"/><line x1="20" y1="9.5" x2="15" y2="14.5"/></svg></button>
   </div>
   <div class="hdr-mid">
     <div class="streak-badge" id="streakBadge">🔥 <span id="streakVal">0</span>x</div>
@@ -1020,8 +1024,8 @@ function _rafMove(){
 
   const tl=document.getElementById('tlRow');
   const rect=tl.getBoundingClientRect();
-  if(mx>rect.right-60) tl.scrollLeft+=14;
-  else if(mx<rect.left+60) tl.scrollLeft-=14;
+  if(mx>rect.right-60) tl.scrollLeft+=6;
+  else if(mx<rect.left+60) tl.scrollLeft-=6;
 
   let best=-1,bd=Infinity;
   const detectR=window.innerWidth<=700?140:110;
@@ -1029,6 +1033,16 @@ function _rafMove(){
     const dp=_dropCache[i];
     const dist=Math.hypot(mx-dp.cx,my-dp.cy);
     if(dist<detectR && dist<bd){bd=dist;best=dp.p;}
+  }
+
+  // Hysterese: aktuelle Luecke nur wechseln, wenn die neue deutlich naeher ist.
+  // Verhindert nervoeses Hin- und Herspringen der Karten beim Einreihen.
+  if(best!==-1 && D.slot!==-1 && best!==D.slot){
+    const cur=_dropCache.find(dp=>dp.p===D.slot);
+    if(cur){
+      const curDist=Math.hypot(mx-cur.cx,my-cur.cy);
+      if(curDist<detectR && bd>curDist-30) best=D.slot;
+    }
   }
 
   if(best!==D.slot){
@@ -1433,9 +1447,7 @@ document.getElementById('hdrRestart').addEventListener('click',()=>{
 });
 document.getElementById('hdrSound').addEventListener('click',()=>{
   S.sound=!S.sound;
-  const btn=document.getElementById('hdrSound');
-  btn.textContent=S.sound?'🔊':'🔇';
-  btn.classList.toggle('muted',!S.sound);
+  document.getElementById('hdrSound').classList.toggle('muted',!S.sound);
 });
 
 // ======================== HAND NAVIGATION ========================
