@@ -1,9 +1,9 @@
 DATA.film = [
   {event:"Lumières: Erste öffentliche Filmvorführung",year:1895,icon:"🎞️",info:"1895 zeigten die Brüder Lumière den ersten öffentlichen Film."},
-  {event:"The Story of the Kelly Gang: Erster Langfilm",year:1906,icon:"🎬",info:"1906 entstand The Story of the Kelly Gang – der erste Langfilm."},
+  {event:"Erster Langfilm: The Kelly Gang",year:1906,icon:"🎬",info:"1906 entstand The Story of the Kelly Gang – der erste Langfilm."},
   {event:"Chaplin dreht The Kid",year:1921,icon:"🎩",info:"1921 erschien Chaplins erster Langfilm The Kid."},
   {event:"The Jazz Singer: Erster Tonfilm",year:1927,icon:"🔊",info:"1927 erschien The Jazz Singer – der erste Tonfilm."},
-  {event:"Disney: Schneewittchen – Erster Zeichentrick-Langfilm",year:1937,icon:"🍎",info:"1937 erschien Schneewittchen – der erste abendfüllende Zeichentrickfilm."},
+  {event:"Disneys Schneewittchen erscheint",year:1937,icon:"🍎",info:"1937 erschien Schneewittchen – der erste abendfüllende Zeichentrickfilm."},
   {event:"Citizen Kane kommt ins Kino",year:1941,icon:"🎥",info:"1941 erschien Citizen Kane – oft als bester Film aller Zeiten genannt."},
   {event:"Dr. No: Erster James-Bond-Film",year:1962,icon:"🔫",info:"1962 erschien Dr. No mit Sean Connery als 007."},
   {event:"Coppola dreht Der Pate",year:1972,icon:"🌹",info:"1972 erschien Der Pate – ein Meilenstein des Gangsterfilms."},

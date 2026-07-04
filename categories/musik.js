@@ -14,8 +14,8 @@ DATA.musik = [
 
   // === JAZZ ===
   {event:"Erster Jazz wird in New Orleans gespielt",year:1900,icon:"🎷",info:"Um 1900 entstand Jazz in New Orleans aus Blues, Ragtime und afrikanischen Rhythmen."},
-  {event:"Original Dixieland Band: Erste Jazzaufnahme",year:1917,icon:"🎺",info:"1917 nahm die Original Dixieland Jass Band die erste Jazzplatte auf."},
-  {event:"Louis Armstrong nimmt What a Wonderful World auf",year:1928,icon:"🎷",info:"Louis Armstrong prägte den Jazz wie kein anderer – sein Trompetenspiel setzte Maßstäbe."},
+  {event:"Erste Jazzaufnahme der Geschichte",year:1917,icon:"🎺",info:"1917 nahm die Original Dixieland Jass Band die erste Jazzplatte auf."},
+  {event:"Armstrong: What a Wonderful World",year:1928,icon:"🎷",info:"Louis Armstrong prägte den Jazz wie kein anderer – sein Trompetenspiel setzte Maßstäbe."},
   {event:"Duke Ellington spielt im Cotton Club",year:1927,icon:"🎹",info:"1927 begann Duke Ellingtons legendäres Engagement im Cotton Club – übertragen im Radio."},
   {event:"Miles Davis: Kind of Blue erscheint",year:1959,icon:"🎺",info:"1959 erschien Kind of Blue – das meistverkaufte Jazzalbum aller Zeiten."},
   {event:"John Coltrane: A Love Supreme erscheint",year:1965,icon:"🎷",info:"1965 erschien Coltranes A Love Supreme – ein spirituelles Meisterwerk des modernen Jazz."},

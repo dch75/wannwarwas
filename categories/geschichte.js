@@ -41,7 +41,7 @@ DATA.geschichte = [
   {event:"Martin Luther veröffentlicht 95 Thesen",year:1517,icon:"⛪",diff:"leicht",
    info:"1517 schlug Luther seine 95 Thesen an – Beginn der Reformation."},
 
-  {event:"Französische Revolution: Sturm auf die Bastille",year:1789,icon:"🇫🇷",diff:"leicht",
+  {event:"Sturm auf die Bastille",year:1789,icon:"🇫🇷",diff:"leicht",
    info:"Am 14. Juli 1789 stürmten Revolutionäre die Bastille – Symbol des Aufstands."},
 
   {event:"Napoleon wird bei Waterloo besiegt",year:1815,icon:"⚔️",diff:"leicht",
@@ -56,7 +56,7 @@ DATA.geschichte = [
   {event:"Weltwirtschaftskrise: Wall-Street-Crash",year:1929,icon:"📉",diff:"leicht",
    info:"Am 24. Oktober 1929 brach die New Yorker Börse zusammen – Beginn der Weltwirtschaftskrise."},
 
-  {event:"Deutschland überfällt Polen: Zweiter Weltkrieg",year:1939,icon:"✈️",diff:"leicht",
+  {event:"Beginn des Zweiten Weltkriegs",year:1939,icon:"✈️",diff:"leicht",
    info:"Am 1. September 1939 marschierte Deutschland in Polen ein."},
 
   {event:"Neil Armstrong betritt den Mond",year:1969,icon:"🌙",diff:"leicht",
@@ -98,7 +98,7 @@ DATA.geschichte = [
   {event:"Mauerbau in Berlin",year:1961,icon:"🧱",diff:"leicht",
    info:"In der Nacht vom 12. auf den 13. August 1961 begann die DDR mit dem Bau der Berliner Mauer."},
 
-  {event:"Apartheid endet: Nelson Mandela wird Präsident",year:1994,icon:"✊",diff:"leicht",
+  {event:"Mandela wird Präsident Südafrikas",year:1994,icon:"✊",diff:"leicht",
    info:"1994 wurde Nelson Mandela als erster schwarzer Präsident Südafrikas gewählt."},
 
 
@@ -143,7 +143,7 @@ DATA.geschichte = [
   {event:"Cortés erobert das Azteken-Reich",year:1521,icon:"⚔️",diff:"normal",
    info:"1521 zerstörte Hernán Cortés Tenochtitlan und beendete das Azteken-Reich."},
 
-  {event:"Westfälischer Friede beendet Dreißigjährigen Krieg",year:1648,icon:"🕊️",diff:"normal",
+  {event:"Westfälischer Friede",year:1648,icon:"🕊️",diff:"normal",
    info:"1648 beendete der Westfälische Friede den Dreißigjährigen Krieg – Grundlage moderner Staatenwelt."},
 
   {event:"Glorious Revolution in England",year:1688,icon:"👑",diff:"normal",
@@ -158,7 +158,7 @@ DATA.geschichte = [
   {event:"Wiener Kongress ordnet Europa neu",year:1815,icon:"🗺️",diff:"normal",
    info:"1814/15 ordnete der Wiener Kongress nach Napoleons Niederlagen Europa neu."},
 
-  {event:"Marx und Engels veröffentlichen Kommunistisches Manifest",year:1848,icon:"⚒️",diff:"normal",
+  {event:"Das Kommunistische Manifest erscheint",year:1848,icon:"⚒️",diff:"normal",
    info:"1848 erschien das Kommunistische Manifest – Grundtext des Marxismus."},
 
   {event:"Sezessionskrieg in den USA beginnt",year:1861,icon:"🏳️",diff:"normal",
@@ -167,7 +167,7 @@ DATA.geschichte = [
   {event:"Deutsches Kaiserreich wird ausgerufen",year:1871,icon:"🦅",diff:"normal",
    info:"Am 18. Januar 1871 wurde im Spiegelsaal von Versailles das Deutsche Kaiserreich ausgerufen."},
 
-  {event:"Erstes Konzentrationslager der Nazis eröffnet",year:1933,icon:"💀",diff:"normal",
+  {event:"Erstes NS-Konzentrationslager",year:1933,icon:"💀",diff:"normal",
    info:"1933 eröffnete das erste KZ in Dachau – Beginn des nationalsozialistischen Terrorsystems."},
 
   {event:"D-Day: Alliierte landen in der Normandie",year:1944,icon:"⚓",diff:"normal",
@@ -200,7 +200,7 @@ DATA.geschichte = [
   {event:"Völkermord in Ruanda",year:1994,icon:"💔",diff:"normal",
    info:"1994 wurden in Ruanda innerhalb von 100 Tagen ca. 800.000 Menschen ermordet."},
 
-  {event:"Finanzkrise 2008 erschüttert Weltwirtschaft",year:2008,icon:"📉",diff:"normal",
+  {event:"Globale Finanzkrise bricht aus",year:2008,icon:"📉",diff:"normal",
    info:"2008 kollabierte die US-Investmentbank Lehman Brothers – globale Finanzkrise."},
 
   {event:"Arabischer Frühling beginnt in Tunesien",year:2010,icon:"🌹",diff:"normal",
@@ -221,13 +221,13 @@ DATA.geschichte = [
   {event:"Konstantinopel wird christliche Hauptstadt",year:330,icon:"🕍",diff:"schwer",
    info:"330 weihte Kaiser Konstantin I. Konstantinopel als neue Hauptstadt des Reiches ein."},
 
-  {event:"Karl Martell stoppt Arabervorstoß bei Tours",year:732,icon:"⚔️",diff:"schwer",
+  {event:"Karl Martell siegt bei Tours",year:732,icon:"⚔️",diff:"schwer",
    info:"732 stoppte Karl Martell bei Tours/Poitiers das arabische Vordringen nach Westeuropa."},
 
-  {event:"Normannen erobern England: Schlacht von Hastings",year:1066,icon:"⚔️",diff:"schwer",
+  {event:"Schlacht von Hastings",year:1066,icon:"⚔️",diff:"schwer",
    info:"1066 besiegte Wilhelm der Eroberer bei Hastings den englischen König Harold."},
 
-  {event:"Erste Kreuzzugsausrufung durch Papst Urban II.",year:1095,icon:"✝️",diff:"schwer",
+  {event:"Papst Urban II. ruft zum Kreuzzug",year:1095,icon:"✝️",diff:"schwer",
    info:"1095 rief Papst Urban II. in Clermont zum Ersten Kreuzzug auf."},
 
   {event:"Marco Polo kehrt aus China zurück",year:1295,icon:"🧭",diff:"schwer",
@@ -242,7 +242,7 @@ DATA.geschichte = [
   {event:"Magellan-Expedition umrundet die Erde",year:1522,icon:"🌍",diff:"schwer",
    info:"1522 kehrte das letzte Schiff der Magellan-Expedition zurück – erste Weltumsegelung."},
 
-  {event:"Galilei wird von der Inquisition verurteilt",year:1633,icon:"🔭",diff:"schwer",
+  {event:"Inquisition verurteilt Galilei",year:1633,icon:"🔭",diff:"schwer",
    info:"1633 verurteilte die Inquisition Galilei zur Abschwörung des heliozentrischen Weltbilds."},
 
   {event:"Großer Brand von London",year:1666,icon:"🔥",diff:"schwer",
@@ -284,7 +284,7 @@ DATA.geschichte = [
   {event:"Kulturrevolution beginnt in China",year:1966,icon:"📕",diff:"schwer",
    info:"1966 entfesselte Mao Zedong die Kulturrevolution – Millionen wurden verfolgt."},
 
-  {event:"Sechstagekrieg: Israel besiegt Arabische Liga",year:1967,icon:"✡️",diff:"schwer",
+  {event:"Sechstagekrieg im Nahen Osten",year:1967,icon:"✡️",diff:"schwer",
    info:"Im Juni 1967 besiegte Israel in sechs Tagen Ägypten, Syrien und Jordanien."},
 
   {event:"Watergate-Skandal: Nixon tritt zurück",year:1974,icon:"📼",diff:"schwer",
@@ -296,7 +296,7 @@ DATA.geschichte = [
   {event:"Tschernobyl-Reaktorunglück",year:1986,icon:"☢️",diff:"schwer",
    info:"Am 26. April 1986 explodierte Reaktor 4 in Tschernobyl – schlimmste Atomkatastrophe der Geschichte."},
 
-  {event:"Massaker auf dem Platz des Himmlischen Friedens",year:1989,icon:"🕊️",diff:"schwer",
+  {event:"Tian'anmen-Massaker in Peking",year:1989,icon:"🕊️",diff:"schwer",
    info:"Im Juni 1989 schlug das chinesische Militär Studentenproteste auf dem Tian'anmen-Platz nieder."},
 
   {event:"Jugoslawien zerfällt: Bosnienkrieg beginnt",year:1992,icon:"💔",diff:"schwer",

@@ -62,7 +62,7 @@ DATA.philosophie = [
   {event:"Nietzsche: Also sprach Zarathustra",year:1883,icon:"🦅",
    info:"Umwertung der Werte, Wille zur Macht."},
 
-  {event:"Wittgenstein: Tractatus logico-philosophicus",year:1921,icon:"💬",
+  {event:"Wittgensteins Tractatus erscheint",year:1921,icon:"💬",
    info:"Sprache als Grenze der Welt."},
 
   {event:"Heidegger: Sein und Zeit",year:1927,icon:"⏳",
