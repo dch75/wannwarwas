@@ -19,8 +19,8 @@
   --gold:#b8953e;--gold-bright:#d4ad4a;--gold-pale:rgba(184,149,62,0.15);--gold-glow:rgba(212,173,74,0.25);
   --ink:#1a1812;--ink-mid:#4a4238;--ink-light:#7a7062;--ink-muted:#8a7d6e;
   --cream:#faf6ee;--accent:#8b3a3a;--accent-light:#a84848;
-  --green:#3a7040;--green-bg:#e6f2e8;--red:#983030;--red-bg:#f8e8e6;
-  --blue:#2a5580;--blue-bg:#e4eef6;--medal:#6b5a30;
+  --green:#8a6d1f;--green-bg:#f5eedb;--red:#983030;--red-bg:#f8e8e6;
+  --blue:#6b5a30;--blue-bg:#f4eedd;--medal:#6b5a30;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
@@ -214,9 +214,9 @@ body{
 
 /* === LAST PLACED HIGHLIGHT === */
 @keyframes lastPlacedCorrect{
-  0%  {box-shadow:0 0 0 2px var(--green), 0 0 20px rgba(58,112,64,0.5), 0 4px 12px rgba(0,0,0,0.15);}
-  40% {box-shadow:0 0 0 3px var(--green), 0 0 32px rgba(58,112,64,0.7), 0 8px 20px rgba(0,0,0,0.2);}
-  100%{box-shadow:0 0 0 2px var(--green), 0 0 20px rgba(58,112,64,0.5), 0 4px 12px rgba(0,0,0,0.15);}
+  0%  {box-shadow:0 0 0 2px var(--green), 0 0 20px rgba(184,149,62,0.5), 0 4px 12px rgba(0,0,0,0.15);}
+  40% {box-shadow:0 0 0 3px var(--green), 0 0 32px rgba(184,149,62,0.7), 0 8px 20px rgba(0,0,0,0.2);}
+  100%{box-shadow:0 0 0 2px var(--green), 0 0 20px rgba(184,149,62,0.5), 0 4px 12px rgba(0,0,0,0.15);}
 }
 @keyframes lastPlacedWrong{
   0%  {box-shadow:0 0 0 2px var(--red), 0 0 20px rgba(152,48,48,0.5), 0 4px 12px rgba(0,0,0,0.15);}
@@ -246,7 +246,7 @@ body{
 .card.flipping .card-face-front{transform:rotateY(0deg);}
 .card.flipping .card-face-back{transform:rotateY(180deg);}
 .card-body{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:12px 8px 10px;height:100%;width:100%;}
-.card .info-dot{position:absolute;top:8px;right:8px;z-index:5;width:18px;height:18px;border-radius:50%;cursor:pointer;border:1px solid rgba(42,85,128,0.3);background:rgba(42,85,128,0.06);color:var(--blue);font-family:'Playfair Display',serif;font-size:0.5rem;font-style:italic;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.card .info-dot{position:absolute;top:8px;right:8px;z-index:5;width:18px;height:18px;border-radius:50%;cursor:pointer;border:1px solid rgba(184,149,62,0.3);background:rgba(184,149,62,0.06);color:var(--blue);font-family:'Playfair Display',serif;font-size:0.5rem;font-style:italic;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
 .card .info-dot:hover{background:var(--blue);color:white;transform:scale(1.2);}
 .card .correct-badge{
   position:absolute;top:8px;left:8px;z-index:5;
@@ -254,7 +254,7 @@ body{
   background:var(--green);
   color:white;font-size:0.7rem;font-weight:900;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 1px 4px rgba(58,112,64,0.4);
+  box-shadow:0 1px 4px rgba(184,149,62,0.4);
   animation:badgePop 0.3s ease-out;
 }
 .card .wrong-badge{
@@ -277,7 +277,7 @@ body{
 .cc-name,.card-name,.hcard-name,.df-name,.cf-name,.wf-name{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere;min-width:0;max-width:100%;justify-content:center;overflow:hidden;}
 .card-yr{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,1.4vw,1.4rem);font-weight:600;font-style:italic;color:var(--accent);background:linear-gradient(135deg,rgba(184,149,62,0.08),rgba(184,149,62,0.04));border:1px solid rgba(184,149,62,0.25);border-radius:4px;padding:3px 12px;margin-top:auto;}
 .card.pop{animation:popIn 0.35s ease-out;}
-.card.correct-flash .card-face-front{box-shadow:0 0 16px rgba(58,112,64,0.4),0 0 0 2px var(--green);}
+.card.correct-flash .card-face-front{box-shadow:0 0 16px rgba(184,149,62,0.4),0 0 0 2px var(--green);}
 .card.wrong-flash .card-face-front{box-shadow:0 0 16px rgba(152,48,48,0.4),0 0 0 2px var(--red);}
 
 /* === DROP === */
@@ -441,10 +441,10 @@ body{
 /* === TOAST === */
 .toast{position:fixed;top:54px;left:50%;transform:translateX(-50%) translateY(-8px);padding:7px 18px;border-radius:6px;font-family:'Cormorant Garamond',serif;font-size:0.82rem;font-weight:600;z-index:400;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-.toast.ok{background:var(--green-bg);color:var(--green);border:1px solid #b0d8b4;}
+.toast.ok{background:var(--green-bg);color:var(--green);border:1px solid #dcc98e;}
 .toast.err{background:var(--red-bg);color:var(--red);border:1px solid #e0b0ac;}
 .toast.bon{background:#fef8e8;color:var(--medal);border:1px solid #e0cc80;}
-.toast.cpu{background:var(--blue-bg);color:var(--blue);border:1px solid #a0c0d8;}
+.toast.cpu{background:var(--blue-bg);color:var(--blue);border:1px solid #d8c9a0;}
 .thinking{display:none;position:fixed;top:54px;left:50%;transform:translateX(-50%);background:rgba(255,252,245,0.95);border:1px solid var(--card-border);border-radius:6px;padding:5px 16px;color:var(--ink-light);font-family:'Cormorant Garamond',serif;font-size:0.78rem;font-style:italic;z-index:150;}
 .thinking.vis{display:block;}
 .dots::after{content:'';animation:dots 1.5s infinite;}
@@ -455,14 +455,14 @@ body{
 .ov.hidden{display:none;}
 .ov-box{text-align:center;max-width:560px;padding:32px 28px;color:var(--ink);}
 .ov-box h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;font-style:italic;color:var(--gold);margin-bottom:4px;line-height:1.1;white-space:nowrap;}
-.ov-box .sub{font-family:'Playfair Display',serif;font-size:clamp(0.7rem,1.2vw,0.95rem);font-weight:600;font-style:italic;color:var(--ink-mid);letter-spacing:0.18em;margin-bottom:24px;}
-.ov-box p{font-size:clamp(0.85rem,1.3vw,1.1rem);line-height:1.6;color:var(--ink-light);margin-bottom:20px;}
-.ov-box .ri{font-size:3rem;margin-bottom:8px;}
+.ov-box .sub{font-family:'Playfair Display',serif;font-size:clamp(0.7rem,1.2vw,0.95rem);font-weight:600;font-style:italic;color:var(--ink-mid);letter-spacing:0.22em;margin-bottom:30px;}
+.ov-box p{font-size:clamp(0.85rem,1.3vw,1.1rem);line-height:1.65;color:var(--ink-light);margin-bottom:28px;}
+.ov-box .ri{font-size:2.6rem;margin-bottom:8px;color:var(--gold);font-family:'Playfair Display',serif;}
 .ov-box .rt{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;font-style:italic;color:var(--gold);margin-bottom:4px;}
 .ov-label{font-family:'Playfair Display',serif;font-size:clamp(0.55rem,0.8vw,0.7rem);font-style:italic;color:var(--ink-muted);letter-spacing:0.15em;margin-bottom:6px;text-transform:uppercase;}
 .sel-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
-.sel-btn{font-family:'Cormorant Garamond',serif;font-size:clamp(0.8rem,1.1vw,1rem);font-weight:600;padding:8px 18px;border-radius:5px;cursor:pointer;border:1px solid var(--card-border);background:var(--card-face);color:var(--ink-light);transition:all 0.2s;touch-action:manipulation;}
-.sel-btn:hover{border-color:var(--gold);color:var(--ink);}
+.sel-btn{font-family:'Cormorant Garamond',serif;font-size:clamp(0.8rem,1.1vw,1rem);font-weight:600;letter-spacing:0.03em;padding:8px 20px;border-radius:6px;cursor:pointer;border:1px solid rgba(184,149,62,0.35);background:transparent;color:var(--ink-light);transition:all 0.2s;touch-action:manipulation;}
+.sel-btn:hover{border-color:var(--gold);color:var(--ink);background:rgba(184,149,62,0.06);}
 .sel-btn.on{background:var(--gold);color:white;border-color:var(--gold);}
 .opts-toggle{font-family:'Cormorant Garamond',serif;font-size:0.78rem;color:var(--ink-muted);cursor:pointer;margin-bottom:10px;display:inline-block;border-bottom:1px dashed var(--ink-muted);transition:color 0.2s;}
 .opts-toggle:hover{color:var(--ink);}
@@ -474,8 +474,8 @@ body{
 .mini-switch.on{background:var(--gold);}
 .mini-switch .mini-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.2);transition:transform 0.25s;}
 .mini-switch.on .mini-knob{transform:translateX(18px);}
-.go-btn{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.8vw,1.4rem);font-weight:900;letter-spacing:0.18em;padding:14px 52px;border:none;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:white;cursor:pointer;box-shadow:0 6px 24px rgba(184,149,62,0.35);transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
-.go-btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(184,149,62,0.45);}
+.go-btn{font-family:'Playfair Display',serif;font-size:clamp(0.95rem,1.6vw,1.3rem);font-weight:700;letter-spacing:0.24em;padding:13px 50px;border:1px solid var(--gold);border-radius:6px;background:var(--gold);color:white;cursor:pointer;box-shadow:0 4px 16px rgba(184,149,62,0.25);transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+.go-btn:hover{transform:translateY(-2px);background:var(--gold-bright);box-shadow:0 7px 22px rgba(184,149,62,0.35);}
 
 /* === END SUMMARY === */
 .summary{max-height:200px;overflow-y:auto;margin:12px 0;text-align:left;font-size:0.82rem;scrollbar-width:thin;}
@@ -505,7 +505,7 @@ body{
 .anl-box h2{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;font-style:italic;color:var(--gold);text-align:center;margin-bottom:18px;}
 .anl-step{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(184,149,62,0.15);}
 .anl-step:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.anl-icon{font-size:1.5rem;flex-shrink:0;width:36px;text-align:center;margin-top:1px;}
+.anl-icon{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;font-style:italic;color:var(--gold);flex-shrink:0;width:30px;height:30px;border:1px solid rgba(184,149,62,0.45);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;}
 .anl-text strong{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:700;color:var(--ink);display:block;margin-bottom:2px;}
 .anl-text span{font-family:'Cormorant Garamond',serif;font-size:0.88rem;color:var(--ink-light);line-height:1.5;}
 .anl-tip{margin-top:16px;padding:10px 14px;background:var(--gold-pale);border:1px solid rgba(184,149,62,0.25);border-radius:6px;font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-style:italic;color:var(--ink-mid);text-align:center;}
@@ -611,7 +611,7 @@ body{
       <button class="sel-btn" data-t="musik">Musik</button>
       <button class="sel-btn" data-t="sport">Sport</button>
       <button class="sel-btn" data-t="film">Film</button>
-      <button class="sel-btn" data-t="mix">🎲 Zufall-Mix</button>
+      <button class="sel-btn" data-t="mix">Zufall-Mix</button>
     </div>
 
     <div class="ov-label">Kartenanzahl</div>
@@ -626,10 +626,10 @@ body{
     <div style="margin-top:28px;"></div>
     <button class="go-btn" id="goBtn">SPIELEN</button>
     <div style="margin-top:12px;"></div>
-    <button class="anl-btn" id="anlBtn">📖 Anleitung</button>
+    <button class="anl-btn" id="anlBtn">Anleitung</button>
     <div style="margin-top:10px;"></div>
 
-    <div class="opts-toggle" id="optsToggle">⚙ Optionen</div>
+    <div class="opts-toggle" id="optsToggle">Optionen</div>
     <div class="opts-panel" id="optsPanel">
       <div class="opt-row"><span class="opt-label">Timer (15s)</span><div class="mini-switch" id="optTimer"><div class="mini-knob"></div></div></div>
       <div class="opt-row"><span class="opt-label">Lernmodus</span><div class="mini-switch" id="optLearn"><div class="mini-knob"></div></div></div>
@@ -664,7 +664,7 @@ body{
     <h2>Wie spielt man Wann war was?</h2>
 
     <div class="anl-step">
-      <div class="anl-icon">🃏</div>
+      <div class="anl-icon">1</div>
       <div class="anl-text">
         <strong>Karten einordnen</strong>
         <span>Du bekommst Karten mit historischen Ereignissen – aber ohne Jahreszahl. Ziehe sie an die richtige Stelle in der Zeitleiste: älter links, neuer rechts.</span>
@@ -672,7 +672,7 @@ body{
     </div>
 
     <div class="anl-step">
-      <div class="anl-icon">✓</div>
+      <div class="anl-icon">2</div>
       <div class="anl-text">
         <strong>Richtig platziert = 1 Punkt</strong>
         <span>Liegt deine Karte chronologisch korrekt zwischen den Nachbarkarten, bekommst du einen Punkt. Falsch platzierte Karten wandern trotzdem in die Zeitleiste – du siehst dann, wo sie hingehört hätten.</span>
@@ -680,7 +680,7 @@ body{
     </div>
 
     <div class="anl-step">
-      <div class="anl-icon">⭐</div>
+      <div class="anl-icon">3</div>
       <div class="anl-text">
         <strong>Bonuspunkt für die exakte Jahreszahl</strong>
         <span>Nach jeder Platzierung kannst du die genaue Jahreszahl tippen. Liegst du genau richtig, gibt es einen Bonuspunkt dazu.</span>
@@ -688,7 +688,7 @@ body{
     </div>
 
     <div class="anl-step">
-      <div class="anl-icon">🔥</div>
+      <div class="anl-icon">4</div>
       <div class="anl-text">
         <strong>Streak-Multiplikator</strong>
         <span>Mehrere Treffer in Folge? Ab 2 richtigen Plaatzierungen hintereinander steigt dein Multiplikator – bis zu ×3 Punkte pro Karte!</span>
@@ -696,7 +696,7 @@ body{
     </div>
 
     <div class="anl-step">
-      <div class="anl-icon">🤖</div>
+      <div class="anl-icon">5</div>
       <div class="anl-text">
         <strong>Gegen den Computer</strong>
         <span>Nach jedem deiner Züge legt der Computer eine Karte – immer korrekt, aber ohne Bonuspunkte. Wer am Ende mehr Punkte hat, gewinnt.</span>
@@ -704,14 +704,14 @@ body{
     </div>
 
     <div class="anl-step">
-      <div class="anl-icon">⚙️</div>
+      <div class="anl-icon">6</div>
       <div class="anl-text">
         <strong>Optionen</strong>
         <span><b>Leicht</b> zeigt dir die Epoche als Hinweis. <b>Schwer</b> zeigt gar nichts. <b>Lernmodus</b> deaktiviert den Gegner – ideal zum Üben. Der <b>Timer</b> gibt dir 15 Sekunden pro Zug.</span>
       </div>
     </div>
 
-    <div class="anl-tip">💡 Tipp: Klicke auf das <b>i</b> einer Karte in der Zeitleiste für mehr Infos zum Ereignis.</div>
+    <div class="anl-tip">Tipp: Klicke auf das <b>i</b> einer Karte in der Zeitleiste für mehr Infos zum Ereignis.</div>
   </div>
 </div>
 
@@ -765,7 +765,7 @@ body{
     <button class="hdr-btn hdr-sound" id="hdrSound" title="Ton an/aus"><svg class="snd-on" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><path d="M14.5 9a4.2 4.2 0 0 1 0 6"/><path d="M17 6.5a7.6 7.6 0 0 1 0 11"/></svg><svg class="snd-off" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><line x1="15" y1="9.5" x2="20" y2="14.5"/><line x1="20" y1="9.5" x2="15" y2="14.5"/></svg></button>
   </div>
   <div class="hdr-mid">
-    <div class="streak-badge" id="streakBadge">🔥 <span id="streakVal">0</span>x</div>
+    <div class="streak-badge" id="streakBadge">Serie ×<span id="streakVal">0</span></div>
     <div class="timer-bar-wrap" id="timerWrap"><div class="timer-bar" id="timerBar"></div></div>
   </div>
   <div class="hdr-scores" id="hdrScores">
@@ -1149,7 +1149,7 @@ function autoSkip(){
     if(S.deck.length)S.hand.push(S.deck.pop());
     S.streak=0;updStreak();
     S.log.push({card,ok:false});
-    toast(`⏰ Zeit abgelaufen! ${card.event} war ${fmt(card.year)}`,'err');
+    toast(`Zeit abgelaufen! ${card.event} war ${fmt(card.year)}`,'err');
     sndErr();
     if(!S.hand.length){S.over=true;render();setTimeout(()=>endG('p'),800);return;}
     if(!S.learn){S.turn=false;render();setTimeout(compT,1400);}
@@ -1227,8 +1227,8 @@ function doPlace(pos,idx,bv,dropRect){
     S.log.push({card,ok:true,bonus:bon});
     S.lastPlaced=card;S.lastPlacedOk=true;
     S.correct.add(card);
-    if(bon){toast(`✨ Richtig + Bonus! ×${mult} → +${pts} Pkt`,'bon');sndBonus();}
-    else{toast(mult>1?`✓ Richtig! ×${mult} Streak → +${pts}`:`✓ Richtig! ${card.event} → ${fmt(card.year)}`,'ok');sndOk();}
+    if(bon){toast(`✦ Richtig + Bonus! ×${mult} → +${pts} Pkt`,'bon');sndBonus();}
+    else{toast(mult>1?`✓ Richtig! Serie ×${mult} → +${pts}`:`✓ Richtig! ${card.event} → ${fmt(card.year)}`,'ok');sndOk();}
   }else{
     S.tl.push(card);S.hand.splice(idx,1);
     if(S.deck.length)S.hand.push(S.deck.pop());
@@ -1348,7 +1348,7 @@ function compT(){
       fl.remove();
       S.tl.push(c);S.cHand.splice(0,1);S.cS++;
       S.lastPlaced=c;S.lastPlacedOk=true;
-      toast(`🤖 PC: ${c.event} → ${fmt(c.year)}`,'cpu');
+      toast(`PC: ${c.event} → ${fmt(c.year)}`,'cpu');
       document.getElementById('think').classList.remove('vis');
       if(!S.cHand.length){
         if(!S.hand.length){
@@ -1372,7 +1372,7 @@ function compT(){
 // ======================== END ========================
 function confetti(){
   const w=document.getElementById('confWrap');w.innerHTML='';
-  const cols=['#b8953e','#d4ad4a','#e8c84c','#8b3a3a','#3a7040','#2a5580','#f0dca0'];
+  const cols=['#b8953e','#d4ad4a','#e8c84c','#f0dca0','#8a6d1f','#fffef5'];
   for(let i=0;i<80;i++){
     const p=document.createElement('div');p.className='confetti-piece';
     p.style.left=Math.random()*100+'%';
@@ -1389,7 +1389,7 @@ function endG(w){
   const isWin=w==='p'||w==='learn';
   const isDraw=w==='draw';
   if(isWin||isDraw)confetti();
-  document.getElementById('eIc').textContent=w==='learn'?'🏆':isWin?'🏆':isDraw?'🤝':'😤';
+  document.getElementById('eIc').textContent=w==='learn'?'✦':isWin?'✦':isDraw?'◆':'✕';
   document.getElementById('eTi').textContent=w==='learn'?'Geschafft!':isWin?'Gewonnen!':isDraw?'Unentschieden!':'Verloren';
   document.getElementById('eRt').textContent=S.pS+' Punkte'+(S.maxStreak>=2?` · Beste Serie: ${S.maxStreak}x`:'');
   document.getElementById('eDt').textContent=w==='learn'?'Alle Karten korrekt eingeordnet!':
@@ -1399,7 +1399,7 @@ function endG(w){
   const sm=document.getElementById('eSummary');sm.innerHTML='';
   S.log.forEach(l=>{
     const d=document.createElement('div');d.className='summary-item '+(l.ok?'right':'wrong');
-    d.innerHTML=`<span class="si-icon">${l.card.icon}</span><span class="si-name">${l.card.event}</span><span class="si-yr">${fmt(l.card.year)}</span><span class="si-mark">${l.ok?(l.bonus?'⭐':'✓'):'✗'}</span>`;
+    d.innerHTML=`<span class="si-icon">${l.card.icon}</span><span class="si-name">${l.card.event}</span><span class="si-yr">${fmt(l.card.year)}</span><span class="si-mark">${l.ok?(l.bonus?'✦':'✓'):'✗'}</span>`;
     sm.appendChild(d);
   });
 }
