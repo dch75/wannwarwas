@@ -1,5 +1,5 @@
 DATA.film = [
-  {event:"Erste Filmvorführung",year:1895,icon:"🎞️",info:"1895 zeigten die Brüder Lumière den ersten öffentlichen Film."},
+  {event:"Erste Filmvorführung (Lumière)",year:1895,icon:"🎞️",info:"1895 zeigten die Brüder Lumière den ersten öffentlichen Film."},
   {event:"Erster Langfilm",year:1906,icon:"🎬",info:"1906 entstand The Story of the Kelly Gang – der erste Langfilm."},
   {event:"Chaplin: The Kid",year:1921,icon:"🎩",info:"1921 erschien Chaplins erster Langfilm The Kid."},
   {event:"Erster Tonfilm",year:1927,icon:"🔊",info:"1927 erschien The Jazz Singer – der erste Tonfilm."},
@@ -9,7 +9,7 @@ DATA.film = [
   {event:"Der Pate",year:1972,icon:"🌹",info:"1972 erschien Der Pate – ein Meilenstein des Gangsterfilms."},
   {event:"Star Wars",year:1977,icon:"⭐",info:"1977 revolutionierte Star Wars das Kino."},
   {event:"Jurassic Park",year:1993,icon:"🦖",info:"1993 setzte Jurassic Park neue Maßstäbe bei visuellen Effekten."},
-  {event:"Titanic",year:1997,icon:"🚢",info:"1997 wurde Titanic zum erfolgreichsten Film aller Zeiten."},
+  {event:"Titanic (Cameron)",year:1997,icon:"🚢",info:"1997 wurde Titanic zum erfolgreichsten Film aller Zeiten."},
   {event:"Herr der Ringe",year:2001,icon:"💍",info:"2001 startete Peter Jacksons Herr-der-Ringe-Trilogie."},
   {event:"Avatar",year:2009,icon:"🌍",info:"2009 revolutionierte Avatar die 3D-Technik im Kino."},
   {event:"Erster Netflix-Film",year:2015,icon:"📺",info:"2015 startete Netflix mit eigenen Filmen – das Streaming-Zeitalter."},

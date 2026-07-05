@@ -8,7 +8,7 @@ DATA.geschichte = [
   {event:"Trojanischer Krieg",year:-1250,icon:"🐴",diff:"leicht",
    info:"Der sagenhafte Krieg zwischen Griechen und Trojanern, überliefert durch Homers Ilias."},
 
-  {event:"Gründung Roms",year:-753,icon:"🐺",diff:"leicht",
+  {event:"Gründung Roms (Romulus)",year:-753,icon:"🐺",diff:"leicht",
    info:"Der Legende nach gründeten Romulus und Remus 753 v. Chr. die Stadt Rom."},
 
   {event:"Spartacus-Aufstand",year:-73,icon:"⛓️",diff:"leicht",
@@ -44,7 +44,7 @@ DATA.geschichte = [
   {event:"Sturm auf die Bastille",year:1789,icon:"🇫🇷",diff:"leicht",
    info:"Am 14. Juli 1789 stürmten Revolutionäre die Bastille – Symbol des Aufstands."},
 
-  {event:"Niederlage bei Waterloo",year:1815,icon:"⚔️",diff:"leicht",
+  {event:"Niederlage bei Waterloo (Napoleon)",year:1815,icon:"⚔️",diff:"leicht",
    info:"Am 18. Juni 1815 wurde Napoleon bei Waterloo endgültig geschlagen."},
 
   {event:"Titanic sinkt",year:1912,icon:"🧊",diff:"leicht",
@@ -59,7 +59,7 @@ DATA.geschichte = [
   {event:"Zweiter Weltkrieg beginnt",year:1939,icon:"✈️",diff:"leicht",
    info:"Am 1. September 1939 marschierte Deutschland in Polen ein."},
 
-  {event:"Mondlandung",year:1969,icon:"🌙",diff:"leicht",
+  {event:"Mondlandung (Armstrong)",year:1969,icon:"🌙",diff:"leicht",
    info:"Am 20. Juli 1969 betrat Neil Armstrong als erster Mensch den Mond."},
 
   {event:"Fall der Berliner Mauer",year:1989,icon:"🧱",diff:"leicht",
@@ -71,7 +71,7 @@ DATA.geschichte = [
   {event:"Fall Konstantinopels",year:1453,icon:"🏰",diff:"leicht",
    info:"1453 eroberten osmanische Truppen unter Mehmed II. Konstantinopel."},
 
-  {event:"Wikinger in Nordamerika",year:1000,icon:"⛵",diff:"leicht",
+  {event:"Wikinger in Nordamerika (Eriksson)",year:1000,icon:"⛵",diff:"leicht",
    info:"Um 1000 n. Chr. erreichte Leif Eriksson als erster Europäer Nordamerika."},
 
   {event:"Dreißigjähriger Krieg",year:1618,icon:"💀",diff:"leicht",
@@ -80,7 +80,7 @@ DATA.geschichte = [
   {event:"Gründung Tenochtitlans",year:1325,icon:"🦅",diff:"leicht",
    info:"1325 gründeten die Azteken ihre Hauptstadt Tenochtitlan – heute Mexiko-Stadt."},
 
-  {event:"Großer Brand Roms",year:64,icon:"🔥",diff:"leicht",
+  {event:"Großer Brand Roms (Nero)",year:64,icon:"🔥",diff:"leicht",
    info:"64 n. Chr. verwüstete ein Großbrand sechs Tage lang die Stadt Rom."},
 
   {event:"Hedschra nach Medina",year:622,icon:"🕌",diff:"leicht",
@@ -137,10 +137,10 @@ DATA.geschichte = [
   {event:"Gutenberg-Bibel",year:1455,icon:"📖",diff:"normal",
    info:"Um 1455 druckte Johannes Gutenberg die erste Bibel mit beweglichen Lettern."},
 
-  {event:"Seeweg nach Indien",year:1498,icon:"⚓",diff:"normal",
+  {event:"Seeweg nach Indien (Vasco da Gama)",year:1498,icon:"⚓",diff:"normal",
    info:"1498 erreichte Vasco da Gama als erster Europäer Indien auf dem Seeweg."},
 
-  {event:"Eroberung der Azteken",year:1521,icon:"⚔️",diff:"normal",
+  {event:"Eroberung der Azteken (Cortés)",year:1521,icon:"⚔️",diff:"normal",
    info:"1521 zerstörte Hernán Cortés Tenochtitlan und beendete das Azteken-Reich."},
 
   {event:"Westfälischer Friede",year:1648,icon:"🕊️",diff:"normal",
@@ -158,7 +158,7 @@ DATA.geschichte = [
   {event:"Wiener Kongress",year:1815,icon:"🗺️",diff:"normal",
    info:"1814/15 ordnete der Wiener Kongress nach Napoleons Niederlagen Europa neu."},
 
-  {event:"Kommunistisches Manifest",year:1848,icon:"⚒️",diff:"normal",
+  {event:"Kommunistisches Manifest (Marx & Engels)",year:1848,icon:"⚒️",diff:"normal",
    info:"1848 erschien das Kommunistische Manifest – Grundtext des Marxismus."},
 
   {event:"US-Sezessionskrieg",year:1861,icon:"🏳️",diff:"normal",
@@ -221,13 +221,13 @@ DATA.geschichte = [
   {event:"Gründung Konstantinopels",year:330,icon:"🕍",diff:"schwer",
    info:"330 weihte Kaiser Konstantin I. Konstantinopel als neue Hauptstadt des Reiches ein."},
 
-  {event:"Schlacht bei Tours",year:732,icon:"⚔️",diff:"schwer",
+  {event:"Schlacht bei Tours (Karl Martell)",year:732,icon:"⚔️",diff:"schwer",
    info:"732 stoppte Karl Martell bei Tours/Poitiers das arabische Vordringen nach Westeuropa."},
 
   {event:"Schlacht von Hastings",year:1066,icon:"⚔️",diff:"schwer",
    info:"1066 besiegte Wilhelm der Eroberer bei Hastings den englischen König Harold."},
 
-  {event:"Erster Kreuzzug ausgerufen",year:1095,icon:"✝️",diff:"schwer",
+  {event:"Erster Kreuzzug ausgerufen (Urban II.)",year:1095,icon:"✝️",diff:"schwer",
    info:"1095 rief Papst Urban II. in Clermont zum Ersten Kreuzzug auf."},
 
   {event:"Marco Polos Rückkehr",year:1295,icon:"🧭",diff:"schwer",
@@ -248,7 +248,7 @@ DATA.geschichte = [
   {event:"Großer Brand von London",year:1666,icon:"🔥",diff:"schwer",
    info:"1666 zerstörte ein Feuer vier Fünftel der Londoner Innenstadt."},
 
-  {event:"Gründung Sankt Petersburgs",year:1703,icon:"🏰",diff:"schwer",
+  {event:"Gründung Sankt Petersburgs (Peter d. Gr.)",year:1703,icon:"🏰",diff:"schwer",
    info:"1703 ließ Zar Peter der Große Sankt Petersburg als Fenster nach Europa erbauen."},
 
   {event:"Siebenjähriger Krieg",year:1756,icon:"⚔️",diff:"schwer",
@@ -257,7 +257,7 @@ DATA.geschichte = [
   {event:"Haitianische Revolution",year:1791,icon:"🔥",diff:"schwer",
    info:"1791 begannen Sklaven in Haiti die einzige erfolgreiche Sklavenrevolution der Geschichte."},
 
-  {event:"Befreiung Südamerikas",year:1819,icon:"🦅",diff:"schwer",
+  {event:"Befreiung Südamerikas (Bolívar)",year:1819,icon:"🦅",diff:"schwer",
    info:"1819 siegte Simón Bolívar bei Boyacá – Startschuss für die Befreiung Südamerikas."},
 
   {event:"Erster Opiumkrieg",year:1839,icon:"⚓",diff:"schwer",
@@ -287,10 +287,10 @@ DATA.geschichte = [
   {event:"Sechstagekrieg",year:1967,icon:"✡️",diff:"schwer",
    info:"Im Juni 1967 besiegte Israel in sechs Tagen Ägypten, Syrien und Jordanien."},
 
-  {event:"Watergate-Skandal",year:1974,icon:"📼",diff:"schwer",
+  {event:"Watergate-Skandal (Nixon)",year:1974,icon:"📼",diff:"schwer",
    info:"1974 trat Richard Nixon als erster US-Präsident zurück – nach dem Watergate-Skandal."},
 
-  {event:"Rote Khmer in Kambodscha",year:1975,icon:"💀",diff:"schwer",
+  {event:"Rote Khmer in Kambodscha (Pol Pot)",year:1975,icon:"💀",diff:"schwer",
    info:"1975–1979 ermordete das Rote-Khmer-Regime unter Pol Pot ca. zwei Millionen Kambodschaner."},
 
   {event:"Tschernobyl-Katastrophe",year:1986,icon:"☢️",diff:"schwer",

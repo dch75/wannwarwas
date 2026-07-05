@@ -1,6 +1,6 @@
 DATA.musik = [
   // === KLASSIK & KIRCHENMUSIK ===
-  {event:"Gregorianischer Choral",year:600,icon:"🎵",info:"Um 600 ordnete Papst Gregor I. den Kirchengesang – Grundlage des Gregorianischen Chorals."},
+  {event:"Gregorianischer Choral (Gregor I.)",year:600,icon:"🎵",info:"Um 600 ordnete Papst Gregor I. den Kirchengesang – Grundlage des Gregorianischen Chorals."},
   {event:"Minnegesang entsteht",year:1150,icon:"🎶",info:"Um 1150 begannen höfische Minnesänger in Deutschland über Liebe und Ritterlichkeit zu dichten."},
   {event:"Monteverdi: Erste Oper",year:1607,icon:"🎭",info:"1607 wurde Monteverdis L'Orfeo uraufgeführt – die erste bedeutende Oper der Musikgeschichte."},
   {event:"Vivaldi: Vier Jahreszeiten",year:1723,icon:"🎻",info:"1723 komponierte Vivaldi Die vier Jahreszeiten – heute eines der meistgespielten Barockwerke."},

@@ -22,7 +22,7 @@ DATA.sport = [
   {event:"Frankreichs erster WM-Titel",year:1998,icon:"🇫🇷",info:"1998 gewann Frankreich die Heim-WM 3:0 gegen Brasilien."},
 
   // === BASKETBALL ===
-  {event:"Basketball erfunden",year:1891,icon:"🏀",info:"1891 erfand James Naismith Basketball in Massachusetts – mit Pfirsichkörben als Tore."},
+  {event:"Basketball erfunden (Naismith)",year:1891,icon:"🏀",info:"1891 erfand James Naismith Basketball in Massachusetts – mit Pfirsichkörben als Tore."},
   {event:"NBA gegründet",year:1946,icon:"🏀",info:"1946 wurde die Basketball Association of America gegründet – Vorläufer der NBA."},
   {event:"Chamberlains 100-Punkte-Spiel",year:1962,icon:"💯",info:"1962 erzielte Wilt Chamberlain 100 Punkte in einem einzigen NBA-Spiel – unerreicht bis heute."},
   {event:"Kareem: NBA-Rekordscorer",year:1984,icon:"🏀",info:"1984 überholte Kareem Abdul-Jabbar Oscar Robertsons Punkterekord – später 38.387 Punkte."},
