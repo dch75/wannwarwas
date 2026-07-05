@@ -1,4 +1,4 @@
-const CACHE = 'wann-war-was-v6';
+const CACHE = 'wann-war-was-v7';
 const FILES = [
   './',
   './index.html',
