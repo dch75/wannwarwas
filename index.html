@@ -592,6 +592,19 @@ body{
   .bonus{min-width:180px;padding:14px 16px;}
   .info-box{padding:16px 18px;}
 }
+
+/* ===== LESBARKEIT: Kartentexte und Meldungen in kraeftigem Playfair Display
+   (echtes Fett 700 vorhanden), Cormorant bleibt fuer Titel-Umfeld und Flusstext ===== */
+.card-name,.hcard-name,.cc-name,.df-name,.cf-name,.wf-name{
+  font-family:'Playfair Display',serif;font-weight:700;line-height:1.3;
+}
+.card-yr,.cf-yr,.wf-yr{
+  font-family:'Playfair Display',serif;font-weight:700;font-style:normal;
+}
+.toast{font-family:'Playfair Display',serif;font-weight:700;font-size:0.76rem;}
+.hcard-bottom{font-size:0.62rem;font-weight:700;color:var(--medal);}
+.hcard-hint{font-size:0.64rem;color:var(--ink-mid);}
+.hand-counter,.cpu-counter{font-size:0.7rem;color:var(--ink-mid);}
 </style>
 </head>
 
