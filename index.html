@@ -1059,21 +1059,33 @@ function _rafMove(){
   if(mx>rect.right-60) tl.scrollLeft+=6;
   else if(mx<rect.left+60) tl.scrollLeft-=6;
 
-  let best=-1,bd=Infinity;
-  const detectR=window.innerWidth<=700?140:110;
-  for(let i=0;i<_dropCache.length;i++){
-    const dp=_dropCache[i];
-    const dist=Math.hypot(mx-dp.cx,my-dp.cy);
-    if(dist<detectR && dist<bd){bd=dist;best=dp.p;}
-  }
+  // Luecken-Positionen jeden Frame frisch bestimmen (bleibt auch nach dem
+  // Auto-Scrollen der Zeitleiste korrekt).
+  buildDropCache();
 
-  // Hysterese: aktuelle Luecke nur wechseln, wenn die neue deutlich naeher ist.
-  // Verhindert nervoeses Hin- und Herspringen der Karten beim Einreihen.
-  if(best!==-1 && D.slot!==-1 && best!==D.slot){
-    const cur=_dropCache.find(dp=>dp.p===D.slot);
-    if(cur){
-      const curDist=Math.hypot(mx-cur.cx,my-cur.cy);
-      if(curDist<detectR && bd>curDist-14) best=D.slot;
+  // Vertikales Aktivierungsband: einordnen, sobald der Zeiger nahe der
+  // Zeitleiste ist. Horizontal wird IMMER die naechstgelegene Luecke gewaehlt
+  // (keine kreisfoermige Reichweite mehr), damit die goldene Markierung ohne
+  // tote Zonen sofort sichtbar wird.
+  const band=ch*0.85;
+  const nearRow = my>rect.top-band && my<rect.bottom+band;
+
+  let best=-1,bd=Infinity;
+  if(nearRow){
+    for(let i=0;i<_dropCache.length;i++){
+      const dp=_dropCache[i];
+      const dx=Math.abs(mx-dp.cx);
+      if(dx<bd){bd=dx;best=dp.p;}
+    }
+
+    // Hysterese: aktuelle Luecke nur wechseln, wenn die neue klar naeher ist.
+    // Verhindert nervoeses Hin- und Herspringen der Karten beim Einreihen.
+    if(D.slot!==-1 && best!==D.slot){
+      const cur=_dropCache.find(dp=>dp.p===D.slot);
+      if(cur){
+        const curDx=Math.abs(mx-cur.cx);
+        if(bd>curDx-18) best=D.slot;
+      }
     }
   }
 
