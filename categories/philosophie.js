@@ -2,7 +2,7 @@ DATA.philosophie = [
   {event:"Thales: Wasser als Urstoff",year:-624,icon:"💧",
    info:"Wasser als Urprinzip (arché) allen Seins."},
 
-  {event:"Pythagoras gründet Schule",year:-530,icon:"📐",
+  {event:"Pythagoras: Zahlenlehre",year:-530,icon:"📐",
    info:"Zahl als Grundstruktur der Wirklichkeit."},
 
   {event:"Konfuzius lehrt Ethik",year:-500,icon:"🎎",
@@ -11,7 +11,7 @@ DATA.philosophie = [
   {event:"Buddhas Erleuchtung",year:-528,icon:"🧘",
    info:"Erkenntnis der Vier Edlen Wahrheiten."},
 
-  {event:"Sokrates lehrt in Athen",year:-430,icon:"🏛️",
+  {event:"Sokrates in Athen",year:-430,icon:"🏛️",
    info:"Dialog, Ironie, Suche nach Tugendwissen."},
 
   {event:"Platon gründet Akademie",year:-387,icon:"📚",
@@ -62,7 +62,7 @@ DATA.philosophie = [
   {event:"Nietzsche: Also sprach Zarathustra",year:1883,icon:"🦅",
    info:"Umwertung der Werte, Wille zur Macht."},
 
-  {event:"Wittgensteins Tractatus erscheint",year:1921,icon:"💬",
+  {event:"Wittgenstein: Tractatus",year:1921,icon:"💬",
    info:"Sprache als Grenze der Welt."},
 
   {event:"Heidegger: Sein und Zeit",year:1927,icon:"⏳",
