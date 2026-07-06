@@ -1,8 +1,13 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.wannwarwas.app",
-        "sha256_cert_fingerprints": ["1F:E7:B8:14:1F:33:C8:8A:1D:3A:22:FF:6F:7A:FB:A1:45:2A:0E:36:C4:B1:F1:4C:75:D9:59:90:12:8A:86:BC"]
-      }
-    }]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wannwarwas.app",
+      "sha256_cert_fingerprints": [
+        "91:FE:78:40:3F:7D:1A:48:DD:B9:22:F5:44:A8:84:6B:36:42:D6:2F:80:8A:B2:2A:8B:70:93:29:CC:C7:AF:7E",
+        "1F:E7:B8:14:1F:33:C8:8A:1D:3A:22:FF:6F:7A:FB:A1:45:2A:0E:36:C4:B1:F1:4C:75:D9:59:90:12:8A:86:BC"
+      ]
+    }
+  }
+]
