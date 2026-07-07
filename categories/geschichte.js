@@ -50,7 +50,7 @@ DATA.geschichte = [
   {event:"Titanic sinkt",year:1912,icon:"🧊",diff:"leicht",
    info:"In der Nacht vom 14. auf den 15. April 1912 sank die Titanic – über 1.500 Tote."},
 
-  {event:"Erster Weltkrieg",year:1914,icon:"💣",diff:"leicht",
+  {event:"Erster Weltkrieg beginnt",year:1914,icon:"💣",diff:"leicht",
    info:"Nach dem Attentat von Sarajevo erklärten die Großmächte einander den Krieg."},
 
   {event:"Wall-Street-Crash",year:1929,icon:"📉",diff:"leicht",
@@ -74,7 +74,7 @@ DATA.geschichte = [
   {event:"Wikinger in Nordamerika (Eriksson)",year:1000,icon:"⛵",diff:"leicht",
    info:"Um 1000 n. Chr. erreichte Leif Eriksson als erster Europäer Nordamerika."},
 
-  {event:"Dreißigjähriger Krieg",year:1618,icon:"💀",diff:"leicht",
+  {event:"Dreißigjähriger Krieg beginnt",year:1618,icon:"💀",diff:"leicht",
    info:"1618 begann mit dem Prager Fenstersturz der Dreißigjährige Krieg."},
 
   {event:"Gründung Tenochtitlans",year:1325,icon:"🦅",diff:"leicht",
@@ -110,13 +110,13 @@ DATA.geschichte = [
   {event:"Tod Alexanders des Großen",year:-323,icon:"🗡️",diff:"normal",
    info:"323 v. Chr. starb Alexander der Große in Babylon – sein Weltreich zerfiel."},
 
-  {event:"Erster Punischer Krieg",year:-264,icon:"⚓",diff:"normal",
+  {event:"Erster Punischer Krieg beginnt",year:-264,icon:"⚓",diff:"normal",
    info:"264 v. Chr. begann der erste von drei Kriegen zwischen Rom und Karthago."},
 
   {event:"Hannibal überquert die Alpen",year:-218,icon:"🐘",diff:"normal",
    info:"218 v. Chr. überquerte Hannibal mit Elefanten die Alpen – um Rom anzugreifen."},
 
-  {event:"Cleopatra regiert Ägypten",year:-51,icon:"🐍",diff:"normal",
+  {event:"Cleopatra besteigt den Thron",year:-51,icon:"🐍",diff:"normal",
    info:"51 v. Chr. bestieg Cleopatra VII. den Thron Ägyptens – letzte Pharaonin."},
 
   {event:"Kreuzritter erobern Jerusalem",year:1099,icon:"✝️",diff:"normal",
@@ -128,7 +128,7 @@ DATA.geschichte = [
   {event:"Mongolen zerstören Bagdad",year:1258,icon:"🏹",diff:"normal",
    info:"1258 plünderten die Mongolen Bagdad und vernichteten das Abbasidische Kalifat."},
 
-  {event:"Hundertjähriger Krieg",year:1337,icon:"⚔️",diff:"normal",
+  {event:"Hundertjähriger Krieg beginnt",year:1337,icon:"⚔️",diff:"normal",
    info:"1337 begann der Hundertjährige Krieg zwischen England und Frankreich."},
 
   {event:"Johanna befreit Orléans",year:1429,icon:"⚔️",diff:"normal",
@@ -161,10 +161,10 @@ DATA.geschichte = [
   {event:"Kommunistisches Manifest (Marx & Engels)",year:1848,icon:"⚒️",diff:"normal",
    info:"1848 erschien das Kommunistische Manifest – Grundtext des Marxismus."},
 
-  {event:"US-Sezessionskrieg",year:1861,icon:"🏳️",diff:"normal",
+  {event:"US-Sezessionskrieg beginnt",year:1861,icon:"🏳️",diff:"normal",
    info:"1861 begann der amerikanische Bürgerkrieg zwischen Nord- und Südstaaten."},
 
-  {event:"Deutsches Kaiserreich",year:1871,icon:"🦅",diff:"normal",
+  {event:"Deutsches Kaiserreich gegründet",year:1871,icon:"🦅",diff:"normal",
    info:"Am 18. Januar 1871 wurde im Spiegelsaal von Versailles das Deutsche Kaiserreich ausgerufen."},
 
   {event:"Erstes KZ (Dachau)",year:1933,icon:"💀",diff:"normal",
@@ -182,7 +182,7 @@ DATA.geschichte = [
   {event:"Gründung der NATO",year:1949,icon:"🛡️",diff:"normal",
    info:"1949 wurde die NATO als westliches Verteidigungsbündnis gegründet."},
 
-  {event:"Koreakrieg",year:1950,icon:"⚔️",diff:"normal",
+  {event:"Koreakrieg beginnt",year:1950,icon:"⚔️",diff:"normal",
    info:"1950 überquerten nordkoreanische Truppen den 38. Breitengrad – Beginn des Koreakriegs."},
 
   {event:"Kuba-Krise",year:1962,icon:"☢️",diff:"normal",
@@ -203,7 +203,7 @@ DATA.geschichte = [
   {event:"Globale Finanzkrise",year:2008,icon:"📉",diff:"normal",
    info:"2008 kollabierte die US-Investmentbank Lehman Brothers – globale Finanzkrise."},
 
-  {event:"Arabischer Frühling",year:2010,icon:"🌹",diff:"normal",
+  {event:"Arabischer Frühling beginnt",year:2010,icon:"🌹",diff:"normal",
    info:"2010/11 löste eine Selbstverbrennung in Tunesien eine Welle von Aufständen in der arabischen Welt aus."},
 
 
@@ -251,7 +251,7 @@ DATA.geschichte = [
   {event:"Gründung Sankt Petersburgs (Peter d. Gr.)",year:1703,icon:"🏰",diff:"schwer",
    info:"1703 ließ Zar Peter der Große Sankt Petersburg als Fenster nach Europa erbauen."},
 
-  {event:"Siebenjähriger Krieg",year:1756,icon:"⚔️",diff:"schwer",
+  {event:"Siebenjähriger Krieg beginnt",year:1756,icon:"⚔️",diff:"schwer",
    info:"1756 begann der Siebenjährige Krieg – erster globaler Konflikt auf mehreren Kontinenten."},
 
   {event:"Haitianische Revolution",year:1791,icon:"🔥",diff:"schwer",
@@ -260,10 +260,10 @@ DATA.geschichte = [
   {event:"Befreiung Südamerikas (Bolívar)",year:1819,icon:"🦅",diff:"schwer",
    info:"1819 siegte Simón Bolívar bei Boyacá – Startschuss für die Befreiung Südamerikas."},
 
-  {event:"Erster Opiumkrieg",year:1839,icon:"⚓",diff:"schwer",
+  {event:"Erster Opiumkrieg beginnt",year:1839,icon:"⚓",diff:"schwer",
    info:"1839 begann der Erste Opiumkrieg – Großbritannien erzwang China zur Öffnung."},
 
-  {event:"Taiping-Aufstand",year:1850,icon:"💀",diff:"schwer",
+  {event:"Taiping-Aufstand beginnt",year:1850,icon:"💀",diff:"schwer",
    info:"1850–1864 forderte der Taiping-Aufstand in China bis zu 30 Millionen Todesopfer."},
 
   {event:"Aufteilung Afrikas",year:1884,icon:"🗺️",diff:"schwer",
@@ -275,13 +275,13 @@ DATA.geschichte = [
   {event:"Rasputin ermordet",year:1916,icon:"🗡️",diff:"schwer",
    info:"1916 wurde Rasputin, der einflussreiche Berater des Zaren, in Petrograd ermordet."},
 
-  {event:"Weimarer Republik",year:1918,icon:"🏛️",diff:"schwer",
+  {event:"Weimarer Republik ausgerufen",year:1918,icon:"🏛️",diff:"schwer",
    info:"Am 9. November 1918 rief Philipp Scheidemann in Berlin die Republik aus."},
 
-  {event:"Großer Sprung nach vorn",year:1958,icon:"⭐",diff:"schwer",
+  {event:"Großer Sprung nach vorn beginnt",year:1958,icon:"⭐",diff:"schwer",
    info:"1958–1962 kostete Maos Kampagne durch Hunger und Gewalt bis zu 45 Millionen Menschen das Leben."},
 
-  {event:"Chinesische Kulturrevolution",year:1966,icon:"📕",diff:"schwer",
+  {event:"Chinesische Kulturrevolution beginnt",year:1966,icon:"📕",diff:"schwer",
    info:"1966 entfesselte Mao Zedong die Kulturrevolution – Millionen wurden verfolgt."},
 
   {event:"Sechstagekrieg",year:1967,icon:"✡️",diff:"schwer",
@@ -290,7 +290,7 @@ DATA.geschichte = [
   {event:"Watergate-Skandal (Nixon)",year:1974,icon:"📼",diff:"schwer",
    info:"1974 trat Richard Nixon als erster US-Präsident zurück – nach dem Watergate-Skandal."},
 
-  {event:"Rote Khmer in Kambodscha (Pol Pot)",year:1975,icon:"💀",diff:"schwer",
+  {event:"Rote Khmer ergreifen die Macht (Pol Pot)",year:1975,icon:"💀",diff:"schwer",
    info:"1975–1979 ermordete das Rote-Khmer-Regime unter Pol Pot ca. zwei Millionen Kambodschaner."},
 
   {event:"Tschernobyl-Katastrophe",year:1986,icon:"☢️",diff:"schwer",

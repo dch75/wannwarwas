@@ -10,7 +10,7 @@ DATA.film = [
   {event:"Star Wars",year:1977,icon:"⭐",info:"1977 revolutionierte Star Wars das Kino."},
   {event:"Jurassic Park",year:1993,icon:"🦖",info:"1993 setzte Jurassic Park neue Maßstäbe bei visuellen Effekten."},
   {event:"Titanic (Cameron)",year:1997,icon:"🚢",info:"1997 wurde Titanic zum erfolgreichsten Film aller Zeiten."},
-  {event:"Herr der Ringe",year:2001,icon:"💍",info:"2001 startete Peter Jacksons Herr-der-Ringe-Trilogie."},
+  {event:"Herr der Ringe (1. Teil)",year:2001,icon:"💍",info:"2001 startete Peter Jacksons Herr-der-Ringe-Trilogie."},
   {event:"Avatar",year:2009,icon:"🌍",info:"2009 revolutionierte Avatar die 3D-Technik im Kino."},
   {event:"Erster Netflix-Film",year:2015,icon:"📺",info:"2015 startete Netflix mit eigenen Filmen – das Streaming-Zeitalter."},
 ];
