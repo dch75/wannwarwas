@@ -1496,7 +1496,7 @@ document.getElementById('optsToggle').addEventListener('click',()=>document.getE
   document.getElementById(id).addEventListener('click',function(){
     this.classList.toggle('on');
     if(id==='optTimer')S.timer=this.classList.contains('on');
-    if(id==='optSound')S.sound=this.classList.contains('on');
+    if(id==='optSound'){S.sound=this.classList.contains('on');document.getElementById('hdrSound').classList.toggle('muted',!S.sound);}
     if(id==='optLearn')S.learn=this.classList.contains('on');
   });
 });
@@ -1515,6 +1515,7 @@ document.getElementById('hdrRestart').addEventListener('click',()=>{
 document.getElementById('hdrSound').addEventListener('click',()=>{
   S.sound=!S.sound;
   document.getElementById('hdrSound').classList.toggle('muted',!S.sound);
+  document.getElementById('optSound').classList.toggle('on',S.sound);
 });
 
 // ======================== HAND NAVIGATION ========================
