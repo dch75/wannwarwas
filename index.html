@@ -36,9 +36,10 @@ body{
 }
 
 /* === HEADER === */
-.hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:0 20px;height:48px;background:rgba(255,252,245,0.95);border-bottom:1px solid rgba(184,149,62,0.25);backdrop-filter:blur(10px);}
-.hdr-left{display:flex;align-items:center;gap:14px;}
-.hdr-title{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(1.1rem,1.6vw,1.5rem);color:var(--gold);}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 20px;height:48px;background:rgba(255,252,245,0.95);border-bottom:1px solid rgba(184,149,62,0.25);backdrop-filter:blur(10px);}
+.hdr-left{display:flex;align-items:center;gap:14px;min-width:0;}
+.hdr-mid,.hdr-scores{flex-shrink:0;}
+.hdr-title{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(1.1rem,1.6vw,1.5rem);color:var(--gold);white-space:nowrap;}
 .hdr-btn{font-family:'Cormorant Garamond',serif;font-size:clamp(0.68rem,0.8vw,0.82rem);font-weight:500;padding:4px 12px;border-radius:4px;cursor:pointer;border:1px solid rgba(184,149,62,0.4);background:transparent;color:var(--ink-mid);transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 .hdr-btn:hover{border-color:var(--gold);color:var(--ink);background:rgba(184,149,62,0.08);}
 .hdr-sound{padding:4px 9px;line-height:1;display:inline-flex;align-items:center;color:var(--ink-mid);}
@@ -596,6 +597,29 @@ body{
   .info-box{padding:16px 18px;}
 }
 
+/* ===== KLEINE HANDYS: Kopfzeile eng, aber nie umbrechend =====
+   Zuvor lief der Titel auf schmalen Displays auf zwei Zeilen und die
+   Kopfzeile wirkte zusammengequetscht. */
+@media(max-width:480px){
+  .hdr{padding:0 8px;gap:5px;}
+  .hdr-left{gap:5px;}
+  .hdr-mid{gap:5px;}
+  .hdr-title{font-size:0.95rem;}
+  .hdr-btn{padding:3px 7px;font-size:0.64rem;}
+  .hdr-sound{padding:3px 6px;}
+  .hdr-sound svg{width:14px;height:14px;}
+  .streak-badge{font-size:0.62rem;padding:2px 6px;}
+  .streak-badge.vis{gap:2px;}
+  .hdr-scores{gap:6px;font-size:0.62rem;}
+  .hdr-scores .s{gap:3px;}
+  .hdr-scores .s b{font-size:0.74rem;}
+}
+@media(max-width:360px){
+  .hdr-btn-txt{display:none;}
+  .hdr-title{font-size:0.86rem;}
+}
+
+
 /* ===== LESBARKEIT: Cormorant bleibt (elegant), aber groesser, in echtem
    Halbfett (600) und mit hauchduenner Konturverstaerkung ===== */
 .card-name,.hcard-name,.cc-name,.df-name,.cf-name,.wf-name{
@@ -786,7 +810,7 @@ body{
 <div class="hdr">
   <div class="hdr-left">
     <div class="hdr-title">Wann war was?</div>
-    <button class="hdr-btn" id="hdrRestart">↺ Neu</button>
+    <button class="hdr-btn" id="hdrRestart">↺<span class="hdr-btn-txt"> Neu</span></button>
     <button class="hdr-btn hdr-sound" id="hdrSound" title="Ton an/aus"><svg class="snd-on" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><path d="M14.5 9a4.2 4.2 0 0 1 0 6"/><path d="M17 6.5a7.6 7.6 0 0 1 0 11"/></svg><svg class="snd-off" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3.5v6h3L11 19V5z" fill="currentColor" stroke="none"/><line x1="15" y1="9.5" x2="20" y2="14.5"/><line x1="20" y1="9.5" x2="15" y2="14.5"/></svg></button>
   </div>
   <div class="hdr-mid">
