@@ -282,6 +282,9 @@ body{
 
 /* === DROP === */
 .drop{width:4px;height:clamp(158px,14.5vw,215px);flex-shrink:0;border-radius:2px;background:transparent;transition:all 0.22s ease;}
+/* Waehrend des Umschaltens der Luecken-Breite wird die Animation kurz
+   ausgesetzt, damit die Scrollposition exakt nachgefuehrt werden kann. */
+.tl-row.no-anim .drop{transition:none;}
 .drop.on{width:36px;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(184,149,62,0.12) 4px,rgba(184,149,62,0.12) 8px);border:1.5px dashed rgba(184,149,62,0.3);border-radius:6px;}
 .drop.hot{width:56px;background:var(--gold-glow);border:2px solid var(--gold-bright);box-shadow:0 0 20px rgba(212,173,74,0.2);border-radius:6px;}
 
@@ -622,7 +625,7 @@ body{
   <div class="ov-box">
     <h1>Wann war was?</h1>
     <div class="sub">Das Zeitreise-Kartenspiel</div>
-    <p>Ziehe Karten an die richtige Stelle der Zeitlinie.<br>Exakte Jahreszahl? Bonuspunkt!</p>
+    <p>Ziehe Karten an die richtige Stelle der Zeitlinie.<br>Exakte Jahreszahl? Bonuspunkt!<br><span style="opacity:0.75">Falsch platzierte Karten werden durch eine neue ersetzt.</span></p>
 
     <div class="ov-label">Thema</div>
     <div class="sel-row" id="themeSel">
@@ -764,6 +767,7 @@ body{
     <button data-k="back">⌫</button><button data-k="0">0</button><button class="bp-ok" id="bGo">OK</button>
   </div>
   <div class="brow">
+    <button class="bb" id="bCancel">↩ Zurücknehmen</button>
     <button class="bb" id="bSkip">Überspringen</button>
   </div>
 </div>
@@ -812,7 +816,7 @@ body{
     </div>
   </div>
 
-  <div class="zone-label">Deine Karten</div>
+  <div class="zone-label" id="handLabel">Deine Karten</div>
   <div class="hand-zone">
     <div class="hand-nav">
       <button class="hand-arrow" id="handPrev">‹</button>
@@ -918,6 +922,14 @@ function upd(){
   document.getElementById('s1c').textContent=S.hand.length;
   document.getElementById('s2').textContent=S.cS;
   document.getElementById('s2c').textContent=S.cHand.length;
+  // Fehlplatzierte Karten werden durch eine neue Karte ersetzt. Das Spiel endet
+  // also nach S.num RICHTIGEN Platzierungen. Damit das nachvollziehbar ist,
+  // wird der Fortschritt ausdruecklich als "richtig" ausgewiesen.
+  const lab=document.getElementById('handLabel');
+  if(lab){
+    const done=S.log.reduce((n,l)=>n+(l.ok?1:0),0);
+    lab.textContent=`Deine Karten · ${done} / ${S.num} richtig`;
+  }
 }
 function updStreak(){
   const b=document.getElementById('streakBadge'),v=document.getElementById('streakVal');
@@ -1029,6 +1041,46 @@ function buildDropCache(){
 let _rafId=null;
 let _pendingMx=0,_pendingMy=0;
 
+/* ---- Scrollposition der Zeitleiste stabil halten -------------------------
+   Beim Aufnehmen einer Karte wachsen alle Luecken von 4px auf 36px. Dadurch
+   wird die Zeitleiste schlagartig deutlich breiter, die Zentrierung ueber
+   margin:auto kippt in den Ueberlauf und der Inhalt rutscht nach links.
+   Loesung: vor der Aenderung eine sichtbare Karte als Anker merken und die
+   Scrollposition danach so korrigieren, dass diese Karte optisch stehen bleibt. */
+function _tlAnchor(){
+  const r=document.getElementById('tlRow');
+  const cards=r.querySelectorAll('.card');
+  if(!cards.length) return null;
+  const rr=r.getBoundingClientRect(),mid=rr.left+rr.width/2;
+  let best=null,bd=Infinity;
+  cards.forEach(c=>{
+    const cr=c.getBoundingClientRect();
+    const d=Math.abs(cr.left+cr.width/2-mid);
+    if(d<bd){bd=d;best=c;}
+  });
+  if(!best) return null;
+  return {el:best,off:best.getBoundingClientRect().left-rr.left};
+}
+function _tlRestore(a){
+  if(!a||!a.el||!a.el.isConnected) return;
+  const r=document.getElementById('tlRow');
+  const delta=(a.el.getBoundingClientRect().left-r.getBoundingClientRect().left)-a.off;
+  if(delta) r.scrollLeft+=delta;
+}
+// Luecken ein-/ausblenden, ohne dass die Zeitleiste wegspringt.
+function _setDropsOpen(open){
+  const tl=document.getElementById('tlRow');
+  const a=_tlAnchor();
+  tl.classList.add('no-anim');
+  tl.querySelectorAll('.drop').forEach(d=>{
+    if(open) d.classList.add('on');
+    else d.classList.remove('on','hot');
+  });
+  void tl.offsetWidth;          // Layout erzwingen
+  _tlRestore(a);
+  requestAnimationFrame(()=>tl.classList.remove('no-anim'));
+}
+
 function startDrag(idx,mx,my,sourceEl,pointerId){
   D.on=true;D.idx=idx;D.slot=-1;D.srcEl=sourceEl;D.pointerId=pointerId;
 
@@ -1042,7 +1094,7 @@ function startDrag(idx,mx,my,sourceEl,pointerId){
   document.body.appendChild(e);D.el=e;
   D._cw=cw;D._ch=ch;
 
-  document.querySelectorAll('.drop').forEach(d=>d.classList.add('on'));
+  _setDropsOpen(true);
   buildDropCache();
 }
 
@@ -1124,8 +1176,8 @@ function endDrag(){
   let dropRect=null;
   document.querySelectorAll('.drop').forEach(d=>{
     if(+d.dataset.p===pos) dropRect=d.getBoundingClientRect();
-    d.classList.remove('on','hot');
   });
+  _setDropsOpen(false);
 
   if(pos>=0){
     pending={pos,idx,dropRect};
@@ -1208,6 +1260,15 @@ function toggleEra(){
 document.getElementById('eraSwitch').addEventListener('click',toggleEra);
 document.querySelector('.bera-label.left').addEventListener('click',()=>{if(!document.getElementById('eraSwitch').classList.contains('bc'))toggleEra();});
 document.querySelector('.bera-label.right').addEventListener('click',()=>{if(document.getElementById('eraSwitch').classList.contains('bc'))toggleEra();});
+// Karte zuruecknehmen: Der Zug ist zu diesem Zeitpunkt noch nicht ausgewertet,
+// er steckt nur in "pending". Verwerfen genuegt, die Karte bleibt auf der Hand.
+document.getElementById('bCancel').addEventListener('click',()=>{
+  document.getElementById('bonusPop').classList.remove('vis');
+  pending=null;
+  renderHand();
+  toast('Karte zurückgenommen','ok');
+  resetTimer();
+});
 document.getElementById('bSkip').addEventListener('click',()=>{
   document.getElementById('bonusPop').classList.remove('vis');
   if(pending)doPlace(pending.pos,pending.idx,null,pending.dropRect);
@@ -1238,7 +1299,7 @@ document.addEventListener('keydown',e=>{
   if(/^[0-9]$/.test(e.key)){inp.value=(inp.value+e.key).slice(0,4);e.preventDefault();}
   else if(e.key==='Backspace'){inp.value=inp.value.slice(0,-1);e.preventDefault();}
   else if(e.key==='Enter')document.getElementById('bGo').click();
-  else if(e.key==='Escape')document.getElementById('bSkip').click();
+  else if(e.key==='Escape')document.getElementById('bCancel').click();
 });
 
 // ======================== PLACE ========================
